@@ -38,11 +38,14 @@
             src="images/PC/block_1_content.png"
             alt="SMEG 義式複合式咖啡機"
           />
-          <img
-            class="product"
-            src="images/PC/Product_cream.png"
-            alt="咖啡機 奶油色"
-          />
+          <div class="hero-product-carousel">
+            <img
+              class="product"
+              id="hero-product-image"
+              src="images/PC/Product_cream.png"
+              alt="咖啡機 奶油色"
+            />
+          </div>
           <img class="is-m" src="images/Phone/block_1_halo_m.png" alt="" />
           <img class="is-m" src="images/Phone/block_1_content_2_m.png" alt="" />
         </div>
@@ -101,35 +104,123 @@
             src="images/PC/block_3_title.png"
             alt="特色亮點"
           />
+          <p class="title-small">
+            ESPRESSO COFFEE MACHINE WITH INTEGRATED GRINDER
+          </p>
           <img
             class="title is-m"
             src="images/Phone/block_3_title_m.png"
             alt="特色亮點"
           />
-          <div class="icons">
-            <figure>
-              <img src="images/PC/block_3_icon_1.svg" alt="icon1" />
-              <figcaption>研磨與義式一機完成</figcaption>
-            </figure>
-            <figure>
-              <img src="images/PC/block_3_icon_2.svg" alt="icon2" />
-              <figcaption>義式與美式皆可</figcaption>
-            </figure>
-            <figure>
-              <img src="images/PC/block_3_icon_3.svg" alt="icon3" />
-              <figcaption>穩定萃取 風味純粹</figcaption>
-            </figure>
-          </div>
+
           <div class="gallery">
             <img
               class="big"
               src="images/PC/block_3_picture_1.jpg"
               alt="情境圖"
             />
-            <img src="images/PC/block_3_picture_3-1.jpg" alt="情境圖" />
-            <img src="images/PC/block_3_picture_3-2.jpg" alt="情境圖" />
-            <img src="images/PC/block_3_picture_3-3.jpg" alt="情境圖" />
-            <img src="images/PC/block_3_product_2.png" alt="產品圖" />
+            <div class="product">
+              <div class="product-text">
+                <span
+                  >Smeg
+                  75週年時，於義大利米蘭發表了專業級的家用義式咖啡機！</span
+                >
+                <span>搭載定量磨豆機專業級的去靜電設計，不結塊、不卡粉</span>
+                <span>更易於均勻萃取，並擁有四種不同的預浸泡與溫度設定。</span>
+                <span
+                  >並將百年咖啡機品牌 La spanavoni
+                  最具指標性的沖泡萃取壓力錶</span
+                >
+                <span>及拉霸咖啡機的緩升壓漸進式萃取放入產品設計中，</span>
+                <span>讓咖啡玩家得以發揮不同咖啡豆的最佳風味！</span>
+              </div>
+              <img
+                class="product-machine"
+                src="images/PC/block_3_product_2.png"
+                alt="產品圖"
+              />
+              <img
+                class="product-machine-bg"
+                src="images/PC/block_3_halo.png"
+                alt="產品圖光暈"
+              />
+            </div>
+            <div class="icons">
+              <div class="icon-item-1">
+                <img src="images/PC/block_3_picture_3-1.jpg" alt="情境圖" />
+                <img
+                  class="icon"
+                  src="images/PC/block_3_icon_1.svg"
+                  alt="icon1"
+                />
+                <p>內建定量磨豆機</p>
+                <p>15段義式研磨度</p>
+              </div>
+              <div class="icon-item-2">
+                <img src="images/PC/block_3_picture_3-2.jpg" alt="情境圖" />
+                <img
+                  class="icon"
+                  src="images/PC/block_3_icon_2.svg"
+                  alt="icon2"
+                />
+                <p>專業雙加熱系統</p>
+                <p>切換無需等待</p>
+              </div>
+              <div class="icon-item-3">
+                <img src="images/PC/block_3_picture_3-3.jpg" alt="情境圖" />
+                <img
+                  class="icon"
+                  src="images/PC/block_3_icon_3.svg"
+                  alt="icon3"
+                />
+                <p>壓力監控錶設計</p>
+                <p>緩升壓漸進式萃取</p>
+              </div>
+            </div>
+
+            <!-- 產品輪播區塊 -->
+            <div class="product-carousel">
+              <button class="carousel-btn prev-btn" onclick="changeProduct(-1)">
+                ‹
+              </button>
+              <div class="product-container">
+                <div class="product-slider" id="product-slider">
+                  <img
+                    class="product-item"
+                    src="images/PC/Product_red.png"
+                    alt="Smeg 咖啡機 紅色"
+                  />
+                  <img
+                    class="product-item"
+                    src="images/PC/Product_white.png"
+                    alt="Smeg 咖啡機 白色"
+                  />
+                  <img
+                    class="product-item"
+                    src="images/PC/Product_black.png"
+                    alt="Smeg 咖啡機 黑色"
+                  />
+                  <img
+                    class="product-item"
+                    src="images/PC/Product_blue.png"
+                    alt="Smeg 咖啡機 藍色"
+                  />
+                  <img
+                    class="product-item"
+                    src="images/PC/Product_cream.png"
+                    alt="Smeg 咖啡機 奶油色"
+                  />
+                  <img
+                    class="product-item"
+                    src="images/PC/Product_green.png"
+                    alt="Smeg 咖啡機 綠色"
+                  />
+                </div>
+              </div>
+              <button class="carousel-btn next-btn" onclick="changeProduct(1)">
+                ›
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -329,6 +420,84 @@
         } else {
           navbar.style.background = "rgba(0,0,0,0.95)";
         }
+      });
+
+      // 首頁產品輪播功能
+      const heroProducts = [
+        "Product_cream.png",
+        "Product_red.png",
+        "Product_white.png",
+        "Product_black.png",
+        "Product_blue.png",
+        "Product_green.png",
+      ];
+
+      let heroCurrentIndex = 0;
+      let heroAutoSlideInterval;
+
+      function changeHeroProduct() {
+        const heroProductImage = document.getElementById("hero-product-image");
+
+        // 淡出效果
+        heroProductImage.style.opacity = "0";
+
+        setTimeout(() => {
+          // 切換圖片
+          heroCurrentIndex = (heroCurrentIndex + 1) % heroProducts.length;
+          heroProductImage.src = `images/PC/${heroProducts[heroCurrentIndex]}`;
+
+          // 淡入效果
+          setTimeout(() => {
+            heroProductImage.style.opacity = "1";
+          }, 50);
+        }, 400); // 等待淡出完成
+      }
+
+      function startHeroAutoSlide() {
+        heroAutoSlideInterval = setInterval(changeHeroProduct, 4000); // 每4秒切換
+      }
+
+      // 產品輪播功能
+      let currentIndex = 0;
+      let autoSlideInterval;
+      const totalProducts = 6;
+      const visibleProducts = 3;
+
+      function changeProduct(direction) {
+        currentIndex += direction;
+
+        // 循環輪播
+        if (currentIndex >= totalProducts - visibleProducts + 1) {
+          currentIndex = 0;
+        } else if (currentIndex < 0) {
+          currentIndex = totalProducts - visibleProducts;
+        }
+
+        const slider = document.getElementById("product-slider");
+        const translateX = -currentIndex * 300; // 每張圖片300px寬度
+        slider.style.transform = `translateX(${translateX}px)`;
+      }
+
+      // 自動輪播功能
+      function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+          changeProduct(1);
+        }, 3000); // 每3秒自動切換
+      }
+
+      function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+      }
+
+      // 頁面載入後開始自動輪播
+      document.addEventListener("DOMContentLoaded", function () {
+        startHeroAutoSlide(); // 啟動首頁產品輪播
+        startAutoSlide(); // 啟動下方產品輪播
+
+        // 滑鼠懸停時暫停自動輪播
+        const carousel = document.querySelector(".product-carousel");
+        carousel.addEventListener("mouseenter", stopAutoSlide);
+        carousel.addEventListener("mouseleave", startAutoSlide);
       });
     </script>
   </body>
