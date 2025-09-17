@@ -10,6 +10,7 @@
     <meta name="format-detection" content="address=no" />
     <title>SMEG 義大利複合式義式咖啡機</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="images/PD_layout.css" />
   </head>
   <body>
     <nav class="navbar">
@@ -58,12 +59,12 @@
             alt="專案優惠"
           />
           <img
-            class="content is-pc"
+            class="content is-pc fade-in-right"
             src="images/PC/block_2_content.png"
             alt="內容"
           />
           <img
-            class="product is-pc"
+            class="product is-pc fade-in-up"
             src="images/PC/block_2_Product.png"
             alt="商品組合"
           />
@@ -124,12 +125,12 @@
               alt="情境圖"
             />
             <img
-                class="bean-second is-pc"
-                src="images/PC/float_coffee_bean_2.png"
-                alt="咖啡豆2"
-              />
+              class="bean-second is-pc"
+              src="images/PC/float_coffee_bean_2.png"
+              alt="咖啡豆2"
+            />
             <div class="product">
-              <div class="product-text">
+              <div class="product-text fade-in-right">
                 <span
                   >Smeg
                   75週年時，於義大利米蘭發表了專業級的家用義式咖啡機！</span
@@ -144,7 +145,7 @@
                 <span>讓咖啡玩家得以發揮不同咖啡豆的最佳風味！</span>
               </div>
               <img
-                class="product-machine"
+                class="product-machine fade-in-up"
                 src="images/PC/block_3_product_2.png"
                 alt="產品圖"
               />
@@ -159,7 +160,7 @@
                 alt="咖啡豆3"
               />
             </div>
-            <div class="icons">
+            <div class="icons fade-in-up">
               <div class="icon-item-1">
                 <img src="images/PC/block_3_picture_3-1.jpg" alt="情境圖" />
                 <img
@@ -193,7 +194,7 @@
             </div>
 
             <!-- 產品輪播區塊 -->
-            <div class="product-carousel">
+            <div class="product-carousel fade-in-up">
               <button class="carousel-btn prev-btn" onclick="changeProduct(-1)">
                 ‹
               </button>
@@ -239,6 +240,26 @@
         </div>
       </section>
       <section id="reviews" class="section s4">
+        <img
+          class="circle is-pc"
+          src="images/PC/block_4_BG_image_1.png"
+          alt="圈圈"
+        />
+        <img
+          class="circle-second is-pc"
+          src="images/PC/block_4_BG_image_2.png"
+          alt="圈圈"
+        />
+        <img
+          class="beans-s4 is-pc"
+          src="images/PC/block_4_video_image_2-2.png"
+          alt="咖啡豆4"
+        />
+        <img
+          class="beans-s4-second is-pc"
+          src="images/PC/block_4_video_image_3-2.png"
+          alt="咖啡豆5"
+        />
         <div class="wrap">
           <img
             class="title is-pc"
@@ -246,33 +267,34 @@
             alt="好評推薦"
           />
           <img
-          class="title is-m"
-          src="images/Phone/block_4_title_m.png"
-          alt="好評推薦"
-        />
-          <p class="title-small-first">
-            東京公開賽冠軍 Chris Lin 林子軒
-          </p>
+            class="title is-m"
+            src="images/Phone/block_4_title_m.png"
+            alt="好評推薦"
+          />
+
+          <p class="title-small-first">東京公開賽冠軍 Chris Lin 林子軒</p>
           <p class="title-small-second">
             2016 World coffee Fest Latte Art Championship
           </p>
 
           <div class="video-grid">
             <img
-            class="dec-top-left"
-            src="images/PC/block_4_video_image_1.png"
-            alt="裝飾圖片"
-          />
-          <img
-            class="dec-bottom-right"
-            src="images/PC/block_4_video_image_2-1.png"
-            alt="裝飾圖片"
-          />
+              class="dec-top-left"
+              src="images/PC/block_4_video_image_1.png"
+              alt="裝飾圖片"
+            />
+            <img
+              class="dec-bottom-right"
+              src="images/PC/block_4_video_image_2-1.png"
+              alt="裝飾圖片"
+            />
             <div class="video-card">
               <video
+                id="video1"
                 controls
                 preload="metadata"
                 poster="images/PC/block_4_video_image_1.png"
+                muted
               >
                 <source src="images/video/video_1.mp4" type="video/mp4" />
               </video>
@@ -282,11 +304,24 @@
                 alt="影片框"
               />
             </div>
+            <p class="title-small-third">咖啡玩家的專業級義式咖啡機</p>
+            <img
+              class="dec-top-left-second"
+              src="images/PC/block_4_video_image_3-1.png"
+              alt="裝飾圖片"
+            />
+            <img
+              class="dec-bottom-right-second"
+              src="images/PC/block_4_video_image_4.png"
+              alt="裝飾圖片"
+            />
             <div class="video-card">
               <video
+                id="video2"
                 controls
                 preload="metadata"
                 poster="images/PC/block_4_video_image_4.png"
+                muted
               >
                 <source src="images/video/video_2.mp4" type="video/mp4" />
               </video>
@@ -294,16 +329,6 @@
                 class="video-frame"
                 src="images/PC/block_4_video_frame.png"
                 alt="影片框"
-              />
-              <img
-                class="dec-top-left"
-                src="images/PC/block_4_video_image_3-1.png"
-                alt="裝飾圖片"
-              />
-              <img
-                class="dec-bottom-right"
-                src="images/PC/block_4_video_image_4.png"
-                alt="裝飾圖片"
               />
             </div>
           </div>
@@ -321,19 +346,150 @@
             src="images/Phone/block_5_title_m.png"
             alt="特色介紹"
           />
-          <div class="features">
-            <figure>
-              <img src="images/PC/block_5_picture_1.jpg" alt="特色1" />
-              <figcaption>無段研磨設定，精準控制咖啡粉細度與粉量。</figcaption>
-            </figure>
-            <figure>
-              <img src="images/PC/block_5_picture_2.jpg" alt="特色2" />
-              <figcaption>恆溫萃取技術，義式與美式風味穩定再現。</figcaption>
-            </figure>
-            <figure>
-              <img src="images/PC/block_5_picture_3.jpg" alt="特色3" />
-              <figcaption>義式奶泡輕鬆上手，迷人綿密口感。</figcaption>
-            </figure>
+
+          <!-- 內建定量磨豆機 -->
+          <div class="feature-section grinder-section">
+            <div class="feature-content">
+              <div class="feature-content-inner">
+                <div class="feature-text fade-in-right">
+                  <div class="feature-title">內建定量磨豆機</div>
+                  <ul class="feature-list">
+                    <li>專業義式咖啡極細研磨</li>
+                    <li>研磨快速(18公克約8~10秒)</li>
+                    <li>去靜電設計，不結塊、不卡粉</li>
+                    <li>快拆式不鏽鋼錐刀，清潔方便</li>
+                    <li>定量研磨(單杯/雙杯)，一鍵記憶設定</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="feature-image fade-in-up">
+                <img
+                  src="images/PC/block_5_picture_1.jpg"
+                  alt="內建定量磨豆機"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 壓力監控錶設計 -->
+          <div class="feature-section pressure-section">
+            <div class="feature-content">
+              <div class="feature-content-inner">
+                <div class="feature-text fade-in-right">
+                  <div class="feature-title">壓力監控錶設計</div>
+                  <ul class="feature-list">
+                    <li>萃取壓力即時監控</li>
+                    <li>過載自動洩壓閥設置</li>
+                    <li>過載時，單/雙杯按鍵會同時閃爍</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="feature-image fade-in-up">
+                <img
+                  src="images/PC/block_5_picture_2.jpg"
+                  alt="壓力監控錶設計"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 雙加熱系統 -->
+          <div class="feature-section heating-section">
+            <div class="feature-content">
+              <div class="feature-content-inner">
+                <div class="feature-text fade-in-right">
+                  <div class="feature-title">雙加熱系統</div>
+                  <p class="feature-description">
+                    分別用於咖啡沖泡和蒸汽熱水，<br />無需等待加熱即可使用。
+                  </p>
+                </div>
+                <img
+                  class="bean-icon"
+                  src="images/PC/float_coffee_bean_4.png"
+                  alt="咖啡豆圖示"
+                />
+                <img
+                  class="bean-icon-second"
+                  src="images/PC/float_coffee_bean_5.png"
+                  alt="咖啡豆圖示"
+                />
+              </div>
+              <div class="feature-image fade-in-up">
+                <img src="images/PC/block_5_picture_3.jpg" alt="雙加熱系統" />
+              </div>
+            </div>
+          </div>
+
+          <!-- 四大模式一鍵設定 -->
+          <div class="feature-section modes-section">
+            <div class="feature-content">
+              <div class="feature-content-inner">
+                <div class="feature-text fade-in-right">
+                  <div class="feature-title">四大模式一鍵設定</div>
+                  <p class="feature-instruction">
+                    同時按住
+                    <img
+                      src="images/PC/block_5_icon_3.svg"
+                      alt="icon1"
+                      class="s5-icon"
+                    />
+                    +
+                    <img
+                      src="images/PC/block_5_icon_4.svg"
+                      alt="icon2"
+                      class="s5-icon"
+                    />
+                    5秒，
+                  </p>
+                  <p class="feature-instruction">
+                    進入設定選單按下所需設定的對應按鈕
+                  </p>
+                  <ul class="feature-list modes-list">
+                    <li>
+                      <img
+                        src="images/PC/block_5_icon_1.svg"
+                        alt="icon3"
+                        class="s5-icon"
+                      />自動關機時間(10、30、40、60分鐘)
+                    </li>
+                    <li>
+                      <img
+                        src="images/PC/block_5_icon_2.svg"
+                        alt="icon4"
+                        class="s5-icon"
+                      />水質硬度(軟、中、硬、極硬)
+                    </li>
+                    <li>
+                      <img
+                        src="images/PC/block_5_icon_3.svg"
+                        alt="icon5"
+                        class="s5-icon"
+                      />萃取溫度(低、中、中高、高)
+                    </li>
+                    <li>
+                      <img
+                        src="images/PC/block_5_icon_4.svg"
+                        alt="icon6"
+                        class="s5-icon"
+                      />預浸泡模式(短、標準、長、漸進式)
+                    </li>
+                  </ul>
+                </div>
+                <div class="pre-infusion-details fade-in-right">
+                  <p>
+                    短：給水後停2秒 標準：給水後停3秒
+                    <br />長：給水後停4秒 漸進式：不停頓，50%起每秒增加10%
+                  </p>
+                </div>
+              </div>
+              <div class="feature-image fade-in-up">
+                <img src="images/PC/Product_cream.png" alt="四大模式一鍵設定" />
+              </div>
+                <img
+                  class="machine-halo fade-in-up"
+                  src="images/PC/block_5_halo.png"
+                  alt="機器光暈"
+                />
           </div>
         </div>
       </section>
@@ -342,7 +498,7 @@
           <img
             class="title is-pc"
             src="images/PC/block_6_title_1.png"
-            alt="更多細節"
+            alt="標題1"
           />
           <img
             class="title is-m"
@@ -356,22 +512,17 @@
               class="is-pc"
             />
             <img
-              src="images/Phone/block_6_image_1_m.jpg"
-              alt="配件與細節"
-              class="is-m"
+              src="images/PC/block_6_title_2.png"
+              alt="標題2"
+              class="title is-pc"
             />
             <img src="images/PC/block_6_m_2.jpg" alt="操作介面" class="is-pc" />
-            <img
-              src="images/Phone/block_6_image_2_m.jpg"
-              alt="操作介面"
-              class="is-m"
-            />
           </div>
         </div>
       </section>
       <section class="section s7 bg-cover">
         <div class="wrap">
-          <img class="title" src="images/PC/block_7_t.png" alt="配件總覽" />
+          <img class="title is-pc fade-in-up" src="images/PC/block_7_t.png" alt="配件總覽" />
           <img
             class="is-m"
             src="images/Phone/block_7_content_m.png"
@@ -384,7 +535,109 @@
           <img
             class="title is-pc"
             src="images/PC/block_8_title_1.png"
-            alt="立即選購"
+            alt="精選熱銷"
+          />
+          
+          <!-- 商品展示區域 -->
+          <div class="PD_layout" data-pd-col-pc="5" data-pd-col-phone="2">
+            <ul>
+              <li class="PD_slide">
+                <div class="PD">
+                  <a href="#">
+                    <div class="PD_img">
+                      <img src="images/PC/Product_black.png" alt="產品1" />
+                    </div>
+                    <div class="PD_into">
+                      <h3>破盤下殺現折2901</h3>
+                      <h4>Apple 蘋果 | iPhone 12 Pro Max 128G</h4>
+                      <p>
+                        <del>3990</del>
+                        <span class="money">$3699</span>
+                        <small>/組</small>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li class="PD_slide">
+                <div class="PD">
+                  <a href="#">
+                    <div class="PD_img">
+                      <img src="images/PC/Product_blue.png" alt="產品2" />
+                    </div>
+                    <div class="PD_into">
+                      <h3>破盤下殺現折2901</h3>
+                      <h4>Apple 蘋果 | iPhone 12 Pro Max 128G</h4>
+                      <p>
+                        <del>3990</del>
+                        <span class="money">$3699</span>
+                        <small>/組</small>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li class="PD_slide">
+                <div class="PD">
+                  <a href="#">
+                    <div class="PD_img">
+                      <img src="images/PC/Product_cream.png" alt="產品3" />
+                    </div>
+                    <div class="PD_into">
+                      <h3>破盤下殺現折2901</h3>
+                      <h4>Apple 蘋果 | iPhone 12 Pro Max 128G</h4>
+                      <p>
+                        <del>3990</del>
+                        <span class="money">$3699</span>
+                        <small>/組</small>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li class="PD_slide">
+                <div class="PD">
+                  <a href="#">
+                    <div class="PD_img">
+                      <img src="images/PC/Product_green.png" alt="產品4" />
+                    </div>
+                    <div class="PD_into">
+                      <h3>破盤下殺現折2901</h3>
+                      <h4>Apple 蘋果 | iPhone 12 Pro Max 128G</h4>
+                      <p>
+                        <del>3990</del>
+                        <span class="money">$3699</span>
+                        <small>/組</small>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li class="PD_slide">
+                <div class="PD">
+                  <a href="#">
+                    <div class="PD_img">
+                      <img src="images/PC/Product_red.png" alt="產品5" />
+                    </div>
+                    <div class="PD_into">
+                      <h3>破盤下殺現折2901</h3>
+                      <h4>Apple 蘋果 | iPhone 12 Pro Max 128G</h4>
+                      <p>
+                        <del>3990</del>
+                        <span class="money">$3699</span>
+                        <small>/組</small>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <img
+            class="title is-pc"
+            src="images/PC/block_8_title_2.png"
+            alt="精選品牌"
           />
           <img
             class="title is-m"
@@ -520,6 +773,67 @@
         clearInterval(autoSlideInterval);
       }
 
+      // 節流函數，優化滾動性能
+      function throttle(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+          const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+          };
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+        };
+      }
+
+      // 滾動動畫功能
+      function handleScrollAnimation() {
+        const elements = document.querySelectorAll('.fade-in-right, .fade-in-up');
+        
+        elements.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const elementBottom = element.getBoundingClientRect().bottom;
+          const windowHeight = window.innerHeight;
+          
+          // 當元素進入視窗範圍時觸發動畫（元素頂部在視窗內且元素底部可見）
+          if (elementTop < windowHeight && elementBottom > 0) {
+            element.classList.add('animate');
+          } else {
+            // 當元素離開視窗範圍時移除動畫類別，允許重新觸發
+            element.classList.remove('animate');
+          }
+        });
+      }
+
+      // 影片自動播放功能
+      function handleVideoAutoplay() {
+        const videos = document.querySelectorAll('video[id^="video"]');
+        
+        videos.forEach(video => {
+          const videoTop = video.getBoundingClientRect().top;
+          const videoBottom = video.getBoundingClientRect().bottom;
+          const windowHeight = window.innerHeight;
+          
+          // 當影片進入視窗範圍時自動播放
+          if (videoTop < windowHeight && videoBottom > 0) {
+            if (video.paused) {
+              video.play().catch(e => {
+                console.log('影片自動播放失敗:', e);
+              });
+            }
+          } else {
+            // 當影片離開視窗範圍時暫停
+            if (!video.paused) {
+              video.pause();
+            }
+          }
+        });
+      }
+
+      // 創建節流版本的滾動處理函數
+      const throttledScrollHandler = throttle(handleScrollAnimation, 100);
+      const throttledVideoHandler = throttle(handleVideoAutoplay, 200);
+
       // 頁面載入後開始自動輪播
       document.addEventListener("DOMContentLoaded", function () {
         startHeroAutoSlide(); // 啟動首頁產品輪播
@@ -529,6 +843,14 @@
         const carousel = document.querySelector(".product-carousel");
         carousel.addEventListener("mouseenter", stopAutoSlide);
         carousel.addEventListener("mouseleave", startAutoSlide);
+        
+        // 添加滾動事件監聽器（使用節流函數優化性能）
+        window.addEventListener('scroll', throttledScrollHandler);
+        window.addEventListener('scroll', throttledVideoHandler);
+        
+        // 初始檢查（防止元素已經在視窗內）
+        handleScrollAnimation();
+        handleVideoAutoplay();
       });
     </script>
   </body>
