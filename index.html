@@ -824,15 +824,23 @@
       function changeProduct(direction) {
         currentIndex += direction;
 
-        // 循環輪播
-        if (currentIndex >= totalProducts - visibleProducts + 1) {
+        // 循環輪播 - 修正邏輯讓所有6張圖片都能顯示
+        if (currentIndex >= totalProducts) {
           currentIndex = 0;
         } else if (currentIndex < 0) {
-          currentIndex = totalProducts - visibleProducts;
+          currentIndex = totalProducts - 1;
         }
 
         const slider = document.getElementById("product-slider");
-        const translateX =  -currentIndex * 300; // 每張圖片300px寬度
+        let translateX;
+        
+        if (window.innerWidth <= 768) {
+          // 手機版：調整偏移量讓所有圖片都能看到
+          translateX = -currentIndex * 180 + 88;
+        } else {
+          // 桌面版：每張圖片300px寬度
+          translateX = -currentIndex * 300;
+        }
         
         slider.style.transform = `translateX(${translateX}px)`;
       }

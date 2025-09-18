@@ -1700,7 +1700,7 @@ white-space: nowrap;
   }
   
   .product-slider {
-    width: calc(6 * 250px);
+    width: calc(6 * 180px);
   }
   
   .carousel-btn {
