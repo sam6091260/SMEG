@@ -11,7 +11,9 @@ body {
   overflow-x: auto; /* 允許水平滾動 */
   min-width: 1200px; /* 設定最小寬度 */
 }
-
+main {
+  overflow-x: hidden;
+}
 /* Navigation */
 .navbar {
   position: fixed;
@@ -592,6 +594,11 @@ letter-spacing: 0.5px;
 white-space: nowrap;
 }
 
+.s3 .product-text-mobile {
+  display: none;
+  opacity: 0 !important;
+}
+
 .s3 .gallery {
   max-width: 1000px;
   margin: 0 auto;
@@ -746,8 +753,8 @@ white-space: nowrap;
 
 .dec-bottom-right-second {
   position: absolute;
-  top: 91%;
-  right: 0%;
+  top: 80%;
+  right: 11%;
   width: 24%;
   height: auto;
   z-index: 8;
@@ -958,6 +965,7 @@ white-space: nowrap;
 .modes-section .feature-content {
   flex-direction: row-reverse;
 }
+
 /* S6 細節 */
 .s6 {
   padding: 100px 0;
@@ -1015,7 +1023,7 @@ white-space: nowrap;
 /* 滾動動畫樣式 */
 .fade-in-right {
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateX(-50px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -1137,10 +1145,12 @@ white-space: nowrap;
 /* s4 區域咖啡豆漂浮動畫 */
 .beans-s4,
 .beans-s4-second {
+  z-index: 10;
   animation: float-bean-s4 3.5s ease-in-out infinite;
 }
 
 .beans-s4 {
+  z-index: 10;
   animation-delay: 0s;
 }
 
@@ -1236,9 +1246,9 @@ white-space: nowrap;
 }
 
 /* 響應式設計 */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .s8 .PD_layout {
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 0 10px;
   }
   
@@ -1279,22 +1289,6 @@ white-space: nowrap;
   margin: 40px auto;
 }
 
-.footer {
-  padding: 40px 0;
-  background: #000;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.footer .logos {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer .logos img {
-  height: 34px;
-}
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -1384,6 +1378,7 @@ white-space: nowrap;
     width: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
   
   .is-pc {
@@ -1400,11 +1395,15 @@ white-space: nowrap;
     background: #1a1411;
   }
   
+  .kv .block_1_title {
+    width: 36%;
+    margin: 0 auto;
+  }
   .kv .product-name {
     font-size: 26px;
     font-weight: 600;
     color: #fff;
-    margin: 40px auto;
+    margin: 20px 0 40px auto;
     text-align: center;
     letter-spacing: 1px;
   }
@@ -1423,7 +1422,7 @@ white-space: nowrap;
   .kv .new {
     /* position: static; */
     transform: none;
-    top: 24%;
+    top: 28%;
     width: 80%;
     margin: 0 auto;
   }
@@ -1470,33 +1469,164 @@ white-space: nowrap;
   
   .s2 {
     padding: 40px 0;
+    height: 100%;
   }
   
   .s2 .title,
   .s2 .content,
   .s2 .product {
-    width: 92%;
+    width: 100%;
   }
   
   .s2 .ribbons {
     display: none;
   }
+
+  .s2 .r1-m{
+    position: absolute;
+    top: 3%;
+    left: 0;
+    z-index: 1;
+    animation: float-bean-icon 3s ease-in-out infinite;
+  }
+
+
+  .s2 .r2-m{
+    position: absolute;
+    top: 32%;
+    left: 0;
+    z-index: 1;
+    animation: float-bean-icon 2s ease-in-out infinite;
+  }
+
+  .s2 .r3-m{
+    position: absolute;
+    top: 93%;
+    left: 0;
+    z-index: 1;
+    animation: float-bean-icon 2s ease-in-out infinite;
+  }
+
+  .s2 .special-title{
+    animation: fadeInDown-special 1s 
+    ease-out 0.5s forwards;
+  }
+
+  .s2 .special-pack{
+    animation: fadeInDown-special 1s 
+    ease-out 0.5s forwards;
+  }
+
+  @keyframes fadeInDown-special {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .s2 .product-price{
+    margin: 40px auto;
+  }
   
+  .s2 .product-group{
+    margin-top: 40px;
+  }
+
+.s3 .product-text {
+  display: none;
+  opacity: 0 !important;
+}
+
+.s3 .product-text-mobile {
+  display: block;
+  opacity: 1 !important;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 2;
+  white-space: normal;
+  
+}
+
+.s3 .product {
+  margin: 80px 0 100px 0;
+}
+
+.s3 .product-machine {
+  width: 74%;
+  top: 27.5%;
+  right: -20%;
+}
+
+.s3 .product-machine-bg {
+    top: 24%;
+    left: 21%;
+    width: 100%;
+}
+
   .s3 {
     padding: 50px 0;
     background: #201714;
   }
   
   .s3 .title {
-    width: 70%;
+    width: 100%;
+    margin-bottom: 10px;
   }
-  
+
+  .s3 .title-small{
+    margin: 0 auto 30px auto;
+    letter-spacing: 0px;
+    font-size: 14px;
+    font-weight: 200;
+  }
+  .s3 .gallery .big {
+    width: 100%;
+  }
+
   .s4 .title {
-    width: 70%;
+    width: 100%;
+    margin: 0 auto 20px auto;
+  }
+
+  .s4 .title-small-first {
+    letter-spacing: 0px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .s4 .title-small-second {
+    margin: 0 auto 30px auto;
+    letter-spacing: 0px;
+    font-size: 14px;
+    font-weight: 200;
+  }
+
+  .s4 .circle {
+    width: 30%;
+    top: 9%;
+    left: -4%;
+  }
+
+  .s4 .circle-second {
+    width: 33%;
+    top: 56%;
+    right: -11%;
+  }
+
+  .dec-bottom-right-second {
+    top: 88%;
+    right: -7%;
+    width: 32%;
   }
   
   .s5 .title {
-    width: 70%;
+    width: 100%;
+    margin: 0 auto 40px auto;
   }
   
   .s6 .title {
@@ -1513,9 +1643,13 @@ white-space: nowrap;
   }
   
   .s3 .icons {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    padding: 0 6px;
+    /* grid-template-columns: repeat(3, 1fr);
+    gap: 12px; */
+    /* padding: 0 6px; */
+    align-items: flex-start;
+    padding: 0;
+    text-wrap: nowrap;
+    font-size: 14px;
   }
 
   .s3 .ribbons-m {
@@ -1535,16 +1669,19 @@ white-space: nowrap;
     gap: 12px;
     padding: 0 6px;
   }
+
+  .s3 .icons img {
+    max-width: 100px;
+  }
   
   /* 產品輪播響應式 */
   .product-carousel {
-    margin: 50px auto;
-    padding: 0 10px;
+    margin: 50px 0;
+    padding: 0 8px;
     width: 100%;
-    left: auto;
+    left: 50%;
     transform: none;
-    min-width: auto; /* 手機版取消最小寬度限制 */
-    max-width: 100vw;
+    min-width: 100vw;
     overflow-x: hidden;
   }
   
@@ -1559,7 +1696,7 @@ white-space: nowrap;
   }
   
   .product-item {
-    width: 250px;
+    width: 180px;
   }
   
   .product-slider {
@@ -1567,8 +1704,8 @@ white-space: nowrap;
   }
   
   .carousel-btn {
-    width: 35px;
-    height: 35px;
+    width: 24px;
+    height: 22px;
     font-size: 24px;
   }
   
@@ -1582,8 +1719,16 @@ white-space: nowrap;
     padding: 50px 0;
     position: relative;
   }
-  
-  
+  .video-card {
+    height: revert;
+  }
+
+  .video-card video {
+    height: revert;
+    margin-bottom: 14px;
+    max-height: 200px;
+  }
+
   .video-card .video-frame {
     position: absolute;
     top: 0;
@@ -1597,21 +1742,33 @@ white-space: nowrap;
   .dec-top-left {
     position: absolute;
     top: 13%;
-    left: 4%;
+    left: 0;
     width: 20%;
     height: auto;
     z-index: 8;
     pointer-events: none;
   }
-  
+  .dec-top-left-second {
+    top: 62%;
+    left: -4%;
+    width: 22%;
+  }
+
   .dec-bottom-right {
     position: absolute;
-    top: 50%;
-    right: 10px;
-    width: 20%;
+    top: 38%;
+    right: -8%;
+    width: 31%;
     height: auto;
     z-index: 8;
     pointer-events: none;
+  }
+
+  .s4 .title-small-third {
+    margin: 60px auto 8px auto;
+    letter-spacing: 0px;
+    font-size: 18px;
+    font-weight: 500;
   }
   
   .s5 {
@@ -1620,25 +1777,128 @@ white-space: nowrap;
   }
   
   .feature-section {
-    margin-bottom: 60px;
+    margin-bottom: 40px !important;
   }
   
   .feature-content {
-    flex-direction: column !important;
-    gap: 30px;
-    padding: 0 20px;
+    gap: 16px;
+    align-items: center;
   }
   
   .feature-title {
-    font-size: 24px;
+    font-size: 20px;
+    margin-bottom: 12px;
+    line-height: 1.3;
   }
   
   .feature-list li {
-    font-size: 16px;
+    font-size: 14px;
+    padding-left: 14px;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    text-wrap: wrap;
   }
   
   .feature-description {
-    font-size: 16px;
+    font-size: 13px;
+    line-height: 1.4;
+    text-wrap: wrap;
+  }
+  
+  .feature-content-inner {
+    width: 50%;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+    justify-content: center;
+  }
+  
+  .feature-image {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .feature-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .machine-halo {
+    width: 100%;
+    left: -28%;
+    bottom: 3%;
+    transform: scale(1.5) !important;
+  }
+  /* 手機版modes-section特殊樣式 */
+  .modes-section .feature-content {
+    flex-direction: row-reverse;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .modes-section .feature-content-inner {
+    width: 50%;
+    padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .modes-section .feature-image {
+    width: 40%;
+    text-align: center;
+  }
+  
+  .modes-section .feature-image img {
+    max-width: 130%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    transform: scale(2);
+  }
+  
+  .modes-section .feature-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  
+  .modes-section .feature-instruction {
+    font-size: 13px;
+    margin: 6px 0;
+    line-height: 1.3;
+  }
+  
+  .modes-section .modes-list li {
+    font-size: 12px;
+    padding-left: 12px;
+    line-height: 1.3;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .modes-section .s5-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  
+  .modes-section .pre-infusion-details {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+  
+  .modes-section .pre-infusion-details p {
+    font-size: 11px;
+    line-height: 1.4;
+    text-wrap: wrap;
+  }
+
+  .feature-text {
+    text-wrap: wrap;
   }
   
   .s6 {
@@ -1658,9 +1918,7 @@ white-space: nowrap;
   }
   
   .s6 .cols img {
-    width: 100%;
-    height: auto;
-    display: block;
+    display: none;
   }
   
   .s8 .cta {
@@ -1672,6 +1930,19 @@ white-space: nowrap;
   .s7 {
     padding: 90px 0;
     background-image: url(images/Phone/block_7_bg_m.jpg);
+  }
+  
+  .s7 .is-m {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .s7 .is-m img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
   }
   
   
