@@ -31,11 +31,56 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-logo-link {
+  display: inline-block;
+  text-decoration: none;
 }
 
 .nav-logo {
   height: 32px;
   width: auto;
+  transition: opacity 0.3s ease;
+}
+
+.nav-logo-link:hover .nav-logo {
+  opacity: 0.8;
+}
+
+/* 漢堡選單按鈕 */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .nav-menu {
@@ -1253,33 +1298,92 @@ white-space: nowrap;
 
 /* Mobile */
 @media (max-width: 768px) {
+  * {
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
   body {
     background: #1a1411;
     padding-top: 50px;
     min-width: auto; /* 手機版取消最小寬度限制 */
     overflow-x: hidden; /* 手機版隱藏水平滾動 */
+    max-width: 100vw;
   }
   
   .nav-wrap {
     padding: 8px 16px;
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .nav-logo-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .nav-logo {
     height: 28px;
   }
   
+  /* 手機版漢堡選單 */
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+  
   .nav-menu {
-    gap: 16px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: right 0.3s ease;
+    padding: 80px 0 40px 0;
+  }
+  
+  .nav-menu.active {
+    right: 0;
   }
   
   .nav-link {
-    font-size: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background: rgba(214, 40, 114, 0.1);
+    color: #d62872;
+  }
+  
+  .nav-link::after {
+    display: none;
   }
   
   .wrap {
     max-width: 100%;
     padding: 0 16px;
     min-width: auto; /* 手機版取消最小寬度限制 */
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
   
   .is-pc {
@@ -1296,6 +1400,15 @@ white-space: nowrap;
     background: #1a1411;
   }
   
+  .kv .product-name {
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    margin: 40px auto;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
   .kv .wrap {
     height: auto;
     padding-top: 40px;
@@ -1308,10 +1421,11 @@ white-space: nowrap;
   }
   
   .kv .new {
-    position: static;
+    /* position: static; */
     transform: none;
-    width: 86%;
-    margin: 0 auto 8px auto;
+    top: 24%;
+    width: 80%;
+    margin: 0 auto;
   }
   
   .kv .halo {
@@ -1329,19 +1443,33 @@ white-space: nowrap;
   }
   
   .kv .product {
-    position: static;
+    position: relative;
     transform: none;
-    width: 72%;
-    margin: 0 auto;
+    width: 75%;
+    margin: 60px 0 40px 0;
+    left: 15%;
+    z-index: 2;
+  }
+
+  .kv .halo-m {
+    position: absolute; /* 絕對定位，放到 product 下方 */
+    top: 0;      /* 視覺微調 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1;
   }
   
+  .kv .cta-btn {
+    margin: 30px auto;
+  }
+
   .kv .beans {
     display: none;
   }
   
   .s2 {
     padding: 40px 0;
-    background: #2b1e19;
   }
   
   .s2 .title,
@@ -1389,6 +1517,18 @@ white-space: nowrap;
     gap: 12px;
     padding: 0 6px;
   }
+
+  .s3 .ribbons-m {
+    img {
+      position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    animation: float-bean-icon 3.5s ease-in-out infinite;
+    }
+  }
   
   .s3 .gallery {
     grid-template-columns: 1fr;
@@ -1400,10 +1540,12 @@ white-space: nowrap;
   .product-carousel {
     margin: 50px auto;
     padding: 0 10px;
-    width: 100vw;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    left: auto;
+    transform: none;
     min-width: auto; /* 手機版取消最小寬度限制 */
+    max-width: 100vw;
+    overflow-x: hidden;
   }
   
   .product-container {

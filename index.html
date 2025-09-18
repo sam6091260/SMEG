@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -8,14 +8,21 @@
     />
     <meta name="format-detection" content="telephone=no" />
     <meta name="format-detection" content="address=no" />
-    <title>SMEG 義大利複合式義式咖啡機</title>
+<title>SMEG 義大利複合式義式咖啡機</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="images/PD_layout.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="nav-wrap">
-        <img class="nav-logo" src="images/SMEG logo.png" alt="SMEG" />
+        <a href="#" class="nav-logo-link">
+          <img class="nav-logo" src="images/SMEG logo.png" alt="SMEG" />
+        </a>
+        <button class="hamburger" aria-label="開啟選單">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
         <ul class="nav-menu">
           <li><a href="#exclusive" class="nav-link">獨家優惠</a></li>
           <li><a href="#product-intro" class="nav-link">商品介紹</a></li>
@@ -28,8 +35,9 @@
     <main>
       <section class="section kv bg-cover">
         <div class="wrap">
+          <p class="product-name is-m">義大利複合式義式咖啡機</p>
           <img
-            class="new is-pc"
+            class="new"
             src="images/PC/block_1_NEW_ARRIVALS.png"
             alt="NEW ARRIVALS"
           />
@@ -46,9 +54,10 @@
               src="images/PC/Product_cream.png"
               alt="咖啡機 奶油色"
             />
+            <img class="halo-m is-m" src="images/Phone/block_1_halo_m.png" alt="" />
           </div>
-          <img class="is-m" src="images/Phone/block_1_halo_m.png" alt="" />
-          <img class="is-m" src="images/Phone/block_1_content_2_m.png" alt="" />
+          <img class="is-m fade-in-up" src="images/Phone/block_1_content_2_m.png" alt="" />
+          <img class="cta-btn is-m " src="images/Phone/block_1_cta_m.png" alt="" />
         </div>
       </section>
       <section id="exclusive" class="section s2 bg-cover">
@@ -76,6 +85,11 @@
             <img class="r5" src="images/PC/block_2_ribbons_5.png" alt="" />
             <img class="r6" src="images/PC/block_2_ribbons_6.png" alt="" />
           </div>
+          <div class="ribbons-m is-m">
+            <img class="r1-m" src="images/Phone/block_2_ribbons_1_m.png" alt="" />
+            <img class="r2-m" src="images/Phone/block_2_ribbons_2_m.png" alt="" />
+            <img class="r3-m" src="images/Phone/block_2_ribbons_3_m.png" alt="" />
+          </div>
           <img
             class="title is-m"
             src="images/Phone/block_2_title_m.png"
@@ -88,15 +102,15 @@
           />
           <img
             class="is-m"
-            src="images/Phone/block_2_content_2_m.png"
-            alt="內容2"
-          />
-          <img
-            class="is-m"
             src="images/Phone/block_2_Product_m.png"
             alt="商品組合"
           />
         </div>
+        <img
+        class="is-m"
+        src="images/Phone/block_2_content_2_m.png"
+        alt="內容2"
+      />
       </section>
       <section id="product-intro" class="section s3 bg-cover">
         <div class="wrap">
@@ -834,6 +848,45 @@
       const throttledScrollHandler = throttle(handleScrollAnimation, 100);
       const throttledVideoHandler = throttle(handleVideoAutoplay, 200);
 
+      // LOGO 點擊回到版頭功能
+      const logoLink = document.querySelector('.nav-logo-link');
+      if (logoLink) {
+        logoLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+
+      // 漢堡選單功能
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+
+      if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+          hamburger.classList.toggle('active');
+          navMenu.classList.toggle('active');
+        });
+
+        // 點擊導航連結時關閉選單
+        document.querySelectorAll('.nav-link').forEach(link => {
+          link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+          });
+        });
+
+        // 點擊外部區域關閉選單
+        document.addEventListener('click', function(e) {
+          if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+          }
+        });
+      }
+
       // 頁面載入後開始自動輪播
       document.addEventListener("DOMContentLoaded", function () {
         startHeroAutoSlide(); // 啟動首頁產品輪播
@@ -853,5 +906,5 @@
         handleVideoAutoplay();
       });
     </script>
-  </body>
+</body>
 </html>
