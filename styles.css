@@ -14,6 +14,7 @@ body {
 main {
   overflow-x: hidden;
 }
+
 /* Navigation */
 .navbar {
   position: fixed;
@@ -944,12 +945,14 @@ white-space: nowrap;
 .pre-infusion-details {
   text-wrap: nowrap;
   margin-left: 40px;
+  opacity: 0.8 !important; /* 使用 !important 確保不被動畫覆蓋 */
   /* margin-top: 20px;
   padding: 15px;
   background: rgba(201, 184, 157, 0.1);
   border-radius: 8px;
   border-left: 4px solid #c9b89d; */
 }
+
 
 .pre-infusion-details p {
   font-size: 14px;
@@ -1046,6 +1049,18 @@ white-space: nowrap;
 
 .fade-in-right.animate {
   opacity: 1;
+  transform: translateX(0);
+}
+
+/* 為 pre-infusion-details 創建特殊的動畫類 */
+.pre-infusion-details.fade-in-right {
+  opacity: 0.8 !important; /* 保持透明度 */
+  transform: translateX(-50px);
+  transition: transform 0.8s ease; /* 只動畫 transform，不動畫 opacity */
+}
+
+.pre-infusion-details.fade-in-right.animate {
+  opacity: 0.8 !important; /* 動畫後仍保持透明度 */
   transform: translateX(0);
 }
 
@@ -1306,6 +1321,78 @@ white-space: nowrap;
   margin: 40px auto;
 }
 
+@media (max-width: 750px) {
+  .s3 .product-text-mobile {
+    display: block !important;
+    opacity: 1 !important;
+    font-size: 16px !important;
+  }
+  .s3 .product-text-mobile span {
+    text-wrap: wrap;
+  }
+}
+@media (max-width: 630px) {
+  .s3 .product-text-mobile {
+    display: block !important;
+    opacity: 1 !important;
+    font-size: 14px !important;
+  }
+
+}
+
+@media (max-width: 570px) {
+  .s3 .icons {
+    margin-top: 100px !important;
+    font-size: 16px !important;
+  }
+  .title-small {
+    font-size: 16px !important;
+  }
+  .s4 .title-small-second{
+    font-size: 20px !important;
+  } 
+  .dec-top-left {
+    top: 15% !important;
+  }
+  .dec-bottom-right {
+    top: 40% !important;
+  }
+  .dec-top-left-second {
+    top: 60% !important;
+  }
+
+  .feature-title {
+    font-size: 20px !important;
+   }
+   .feature-list li {
+    font-size: 14px !important;
+   }
+   .feature-description {
+    font-size: 14px !important;
+   }
+   .pre-infusion-details {
+    font-size: 14px !important;
+   }
+     
+  .s5 .s5-content {
+    width: 100% !important;
+  }
+
+  .s3 .product-machine {
+    left: 59% !important;
+    width: 86% !important;
+    top: -16% !important;
+  }
+
+}
+
+@media (max-width: 520px) {
+  .s3 .product-machine {
+    left: 63% !important;
+    width: 90% !important;
+    top: -11% !important;
+}
+}
 
 /* Tablet to Mobile Responsive Scaling */
 @media (max-width: 768px) and (min-width: 480px) {
@@ -1316,10 +1403,17 @@ white-space: nowrap;
   .s3 .product-text {
     font-size: 13px;
   }
+
   
   .s3 .product-text-mobile {
     font-size: 11px;
   }
+  .modes-section .feature-image img {
+    transform: translateX(-20%) scale(2.1) !important;
+   }
+   .machine-halo {
+    bottom: 6% !important;
+   }
 }
 
 @media (max-width: 479px) {
@@ -1597,7 +1691,7 @@ white-space: nowrap;
   letter-spacing: 0;
   line-height: 2;
   white-space: normal;
-  
+  /* width: 68%; */
 }
 
 .s3 .product {
@@ -1608,8 +1702,8 @@ white-space: nowrap;
 
 .s3 .product-machine {
   left: 50%;
-  width: 100%;
-  top: -10%;
+  width: 93%;
+  top: -16%;
 }
 
 .s3 .product-machine-bg {
@@ -1887,7 +1981,7 @@ white-space: nowrap;
   .machine-halo {
     width: 100%;
     left: -28%;
-    bottom: 3%;
+    bottom: 6%;
     transform: scale(1.5) !important;
   }
   /* 手機版modes-section特殊樣式 */
@@ -1915,7 +2009,7 @@ white-space: nowrap;
     height: auto;
     max-height: 400px;
     object-fit: contain;
-    transform: scale(1.5);
+    transform: translateX(-20%) scale(2.1) !important;
   }
   
   .modes-section .feature-title {
@@ -2025,11 +2119,11 @@ white-space: nowrap;
     display: block;
     opacity: 1 !important;
     color: white;
-    font-size: 13px;
+    font-size: 12px !important;
     letter-spacing: 0;
     line-height: 2;
     white-space: normal;
-    
+    width: 90% !important;
   }
   
   .s3 .product {
@@ -2039,15 +2133,14 @@ white-space: nowrap;
   }
   
   .s3 .product-machine {
-    left: 60%;
-    width: 90%;
-    top: -10%;
+    left: 67% !important;
   }
   
   .s3 .product-machine-bg {
     left: 46%;
-    top: -20%;
+    top: 13%;
     width: 100%;
+    transform: scale(1.8);
   }
 
   .s3 .icons {
@@ -2068,10 +2161,10 @@ white-space: nowrap;
     font-size: 14px;
   }
   .s4 .title-small-first{
-    font-size: 16px;
+    font-size: 16px !important;
   }
   .s4 .title-small-second{
-    font-size: 16px;
+    font-size: 16px !important;
   }
   .s4 .title-small-third{
     font-size: 16px;
@@ -2119,6 +2212,6 @@ white-space: nowrap;
   .dec-top-left-second{
     top: 60%;
   }
-  
+
 }
 
