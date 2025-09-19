@@ -967,6 +967,12 @@ white-space: nowrap;
 }
 
 /* S6 細節 */
+
+.s6 .wrap {
+  max-width: 100%;
+  min-width: 100%;
+  padding: 0;
+}
 .s6 {
   padding: 100px 0;
   background-image: url(images/PC/bg_style_4.png);
@@ -983,12 +989,12 @@ white-space: nowrap;
   display: flex;
   flex-direction: column;
   gap: 0;
-  width: 100vw;
+  /* width: 100vw; */
   position: relative;
   left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  transform: translateX(-50%);
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .s6 .cols img {
@@ -1403,7 +1409,7 @@ white-space: nowrap;
     font-size: 26px;
     font-weight: 600;
     color: #fff;
-    margin: 20px 0 40px auto;
+    margin: 10px 0 40px auto;
     text-align: center;
     letter-spacing: 1px;
   }
@@ -1422,7 +1428,7 @@ white-space: nowrap;
   .kv .new {
     /* position: static; */
     transform: none;
-    top: 28%;
+    top: 24%;
     width: 80%;
     margin: 0 auto;
   }
@@ -1445,16 +1451,14 @@ white-space: nowrap;
     position: relative;
     transform: none;
     width: 75%;
-    margin: 60px 0 40px 0;
+    margin: 40px 0 40px 0;
     left: 15%;
     z-index: 2;
   }
 
   .kv .halo-m {
-    position: absolute; /* 絕對定位，放到 product 下方 */
-    top: 0;      /* 視覺微調 */
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute;
+    top: -20%;
     width: 100%;
     z-index: 1;
   }
@@ -1557,12 +1561,12 @@ white-space: nowrap;
 }
 
 .s3 .product {
-  margin: 80px 0 100px 0;
+  margin: 40px 0 80px 0;
 }
 
 .s3 .product-machine {
-  width: 74%;
-  top: 27.5%;
+  width: 70%;
+  top: 26%;
   right: -20%;
 }
 
@@ -1587,6 +1591,7 @@ white-space: nowrap;
     letter-spacing: 0px;
     font-size: 14px;
     font-weight: 200;
+    text-wrap: nowrap;
   }
   .s3 .gallery .big {
     width: 100%;
@@ -1675,9 +1680,8 @@ white-space: nowrap;
   }
 
   .s3 .icons img {
-    max-width: 100px;
+    max-width: 112px;
   }
-  
   /* 產品輪播響應式 */
   .product-carousel {
     margin: 50px 0;
@@ -1905,6 +1909,9 @@ white-space: nowrap;
     text-wrap: wrap;
   }
   
+  .s6 .wrap {
+    padding: 0;
+  }
   .s6 {
     padding: 60px 0;
   }
