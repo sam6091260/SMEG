@@ -382,7 +382,8 @@
             alt="特色介紹"
           />
 
-          <!-- 內建定量磨豆機 -->
+          <div class="s5-content">
+            <!-- 內建定量磨豆機 -->
           <div class="feature-section grinder-section">
             <div class="feature-content">
               <div class="feature-content-inner">
@@ -453,6 +454,7 @@
                 <img src="images/PC/block_5_picture_3.jpg" alt="雙加熱系統" />
               </div>
             </div>
+          </div>
           </div>
 
           <!-- 四大模式一鍵設定 -->
@@ -539,8 +541,16 @@
                       />預浸泡模式<br/>(短、標準、長、漸進式)
                     </li>
                   </ul>
+                    <p class="pre-infusion-details is-pc fade-in-right">
+                    短：給水後停2秒 標準：給水後停3秒
+                    <br />長：給水後停4秒 漸進式：不停頓，50%起每秒增加10%
+                  </p>
+                  <p class="pre-infusion-details is-m fade-in-right">
+                    短：給水後停2秒<br/>標準：給水後停3秒
+                    <br />長：給水後停4秒<br/>漸進式：不停頓，<br/>50%起每秒增加10%
+                  </p>
                 </div>
-                <div class="pre-infusion-details fade-in-right">
+                <!-- <div class="pre-infusion-details fade-in-right">
                   <p class="is-pc">
                     短：給水後停2秒 標準：給水後停3秒
                     <br />長：給水後停4秒 漸進式：不停頓，50%起每秒增加10%
@@ -549,7 +559,7 @@
                     短：給水後停2秒<br/>標準：給水後停3秒
                     <br />長：給水後停4秒<br/>漸進式：不停頓，<br/>50%起每秒增加10%
                   </p>
-                </div>
+                </div> -->
               </div>
               <div class="feature-image fade-in-up">
                 <img src="images/PC/Product_cream.png" alt="四大模式一鍵設定" />
@@ -834,12 +844,17 @@
         const slider = document.getElementById("product-slider");
         let translateX;
         
+        // 使用百分比計算，適應各種螢幕尺寸
+        const containerWidth = document.querySelector('.product-container').offsetWidth;
+        const itemWidth = containerWidth / 3; // 顯示3張圖片
+        
         if (window.innerWidth <= 768) {
-          // 手機版
-          translateX = -currentIndex * 180 + 88;
+          // 手機版：顯示2張圖片
+          const mobileItemWidth = containerWidth / 3;
+          translateX = Math.max(-(totalProducts - 3) * mobileItemWidth, -currentIndex * mobileItemWidth);
         } else {
-          // 桌面版：限制在可見範圍內
-          translateX = Math.max(-(totalProducts - 3) * 300, -currentIndex * 300);
+          // 桌面版：顯示3張圖片
+          translateX = Math.max(-(totalProducts - 3) * itemWidth, -currentIndex * itemWidth);
         }
         
         slider.style.transform = `translateX(${translateX}px)`;

@@ -411,8 +411,8 @@ a {
 
 .s3 .icon {
   margin: 10px 0;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   text-align: center;
   color: #eee;
 }
@@ -547,12 +547,12 @@ a {
 .product-slider {
   display: flex;
   transition: transform 0.5s ease;
-  width: calc(6 * 300px); /* 6張圖片 × 300px */
+  width: 600%; /* 6張圖片 × 100% */
   position: relative;
 }
 
 .product-item {
-  width: 300px;
+  width: 5.666%; /* 100% / 6張圖片 = 16.666% */
   height: auto;
   flex-shrink: 0;
   transition: all 0.3s ease;
@@ -786,6 +786,13 @@ white-space: nowrap;
   padding: 80px 0;
   background-image: url(images/PC/bg_style_2.jpg);
 }
+
+.s5 .s5-content {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
 
 .s5 .title {
   width: 50%;
@@ -1300,6 +1307,35 @@ white-space: nowrap;
 }
 
 
+/* Tablet to Mobile Responsive Scaling */
+@media (max-width: 768px) and (min-width: 480px) {
+  .s3 .product {
+    transform: scale(0.8);
+  }
+  
+  .s3 .product-text {
+    font-size: 13px;
+  }
+  
+  .s3 .product-text-mobile {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 479px) {
+  .s3 .product {
+    transform: scale(0.6);
+  }
+  
+  .s3 .product-text {
+    font-size: 11px;
+  }
+  
+  .s3 .product-text-mobile {
+    font-size: 10px;
+  }
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   * {
@@ -1557,7 +1593,7 @@ white-space: nowrap;
   display: block;
   opacity: 1 !important;
   color: white;
-  font-size: 12px;
+  font-size: 20px;
   letter-spacing: 0;
   line-height: 2;
   white-space: normal;
@@ -1565,19 +1601,21 @@ white-space: nowrap;
 }
 
 .s3 .product {
-  margin: 40px 0 80px 0;
+  margin: 60px 0 80px 0;
+  transform-origin: center;
+  transform: scale(1);
 }
 
 .s3 .product-machine {
-  width: 70%;
-  top: 26%;
-  right: -20%;
+  left: 50%;
+  width: 100%;
+  top: -10%;
 }
 
 .s3 .product-machine-bg {
-    top: 24%;
-    left: 21%;
-    width: 100%;
+  left: 46%;
+  top: -20%;
+  width: 100%;
 }
 
   .s3 {
@@ -1632,8 +1670,8 @@ white-space: nowrap;
   }
 
   .dec-bottom-right-second {
-    top: 88%;
-    right: -7%;
+    top: 86%;
+    right: -10%;
     width: 32%;
   }
   
@@ -1652,17 +1690,15 @@ white-space: nowrap;
   }
   
   .s8 .title {
-    width: 70%;
+    width: 100%;
   }
   
   .s3 .icons {
-    /* grid-template-columns: repeat(3, 1fr);
-    gap: 12px; */
-    /* padding: 0 6px; */
+    margin-top: 260px;
     align-items: flex-start;
     padding: 0;
     text-wrap: nowrap;
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .s3 .ribbons-m {
@@ -1683,9 +1719,6 @@ white-space: nowrap;
     padding: 0 6px;
   }
 
-  .s3 .icons img {
-    max-width: 112px;
-  }
   /* 產品輪播響應式 */
   .product-carousel {
     margin: 50px 0;
@@ -1708,11 +1741,11 @@ white-space: nowrap;
   }
   
   .product-item {
-    width: 180px;
+    width: 33.666%; /* 保持百分比寬度，適應各種螢幕 */
   }
   
   .product-slider {
-    width: calc(6 * 180px);
+    width: 100%; /* 6張圖片 × 100% */
   }
   
   .carousel-btn {
@@ -1736,9 +1769,12 @@ white-space: nowrap;
   }
 
   .video-card video {
-    height: revert;
-    margin-bottom: 14px;
-    max-height: 200px;
+      height: auto;
+      width: 100%;
+      max-height: 45vh; /* 使用視窗高度的50%作為最大高度 */
+      min-height: 200px; /* 設定最小高度確保基本顯示 */
+      margin-bottom: 14px;
+      object-fit: cover; /* 保持比例並填滿容器 */
   }
 
   .video-card .video-frame {
@@ -1753,15 +1789,15 @@ white-space: nowrap;
   
   .dec-top-left {
     position: absolute;
-    top: 13%;
-    left: 0;
+    top: 10%;
+    left: -2%;
     width: 20%;
     height: auto;
     z-index: 8;
     pointer-events: none;
   }
   .dec-top-left-second {
-    top: 62%;
+    top: 53%;
     left: -4%;
     width: 22%;
   }
@@ -1787,6 +1823,11 @@ white-space: nowrap;
     padding: 60px 0;
     min-width: auto;
   }
+
+  .s5 .s5-content {
+    width: 90%;
+    margin: 0 auto;
+  }
   
   .feature-section {
     margin-bottom: 40px !important;
@@ -1798,13 +1839,13 @@ white-space: nowrap;
   }
   
   .feature-title {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 12px;
     line-height: 1.3;
   }
   
   .feature-list li {
-    font-size: 14px;
+    font-size: 16px;
     padding-left: 14px;
     line-height: 1.4;
     margin-bottom: 4px;
@@ -1812,7 +1853,7 @@ white-space: nowrap;
   }
   
   .feature-description {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.4;
     text-wrap: wrap;
   }
@@ -1867,23 +1908,23 @@ white-space: nowrap;
     height: auto;
     max-height: 400px;
     object-fit: contain;
-    transform: scale(2);
+    transform: scale(1.5);
   }
   
   .modes-section .feature-title {
-    font-size: 18px;
+    font-size: 30px;
     margin-bottom: 16px;
     line-height: 1.2;
   }
   
   .modes-section .feature-instruction {
-    font-size: 13px;
+    font-size: 16px;
     margin: 6px 0;
     line-height: 1.3;
   }
   
   .modes-section .modes-list li {
-    font-size: 12px;
+    font-size: 16px;
     padding-left: 12px;
     line-height: 1.3;
     margin-bottom: 6px;
@@ -1893,18 +1934,21 @@ white-space: nowrap;
   }
   
   .modes-section .s5-icon {
-    width: 24px;
-    height: 24px;
+    width: 10%;
+    height: 10%;
     flex-shrink: 0;
   }
   
   .modes-section .pre-infusion-details {
     margin-left: 0;
     margin-top: 12px;
+    margin-left: 50px;
+    opacity: 0.8;
+    font-size: 16px;
   }
   
   .modes-section .pre-infusion-details p {
-    font-size: 11px;
+    font-size: 16px;
     line-height: 1.4;
     text-wrap: wrap;
   }
@@ -1938,8 +1982,8 @@ white-space: nowrap;
   
   .s8 .cta {
     grid-template-columns: 1fr;
-    gap: 14px;
-    padding: 0 6px;
+    gap: 50px;
+    padding: 0 30px;
   }
   
   .s7 {
@@ -1960,10 +2004,84 @@ white-space: nowrap;
     max-width: 100%;
   }
   
-  
+  .s8 .PD_layout .PD h4 {
+    font-size: 16px;
+  }
+
   .s8 {
     padding: 60px 0;
   }
 }
 
+@media (max-width: 479px) {
+  .s3 .product-text-mobile {
+    display: block;
+    opacity: 1 !important;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 2;
+    white-space: normal;
+    
+  }
+  
+  .s3 .product {
+    margin: 60px 0 80px 0;
+    transform-origin: center;
+    transform: scale(1);
+  }
+  
+  .s3 .product-machine {
+    left: 60%;
+    width: 90%;
+    top: -10%;
+  }
+  
+  .s3 .product-machine-bg {
+    left: 46%;
+    top: -20%;
+    width: 100%;
+  }
+
+  .s3 .icons {
+    font-size: 14px;
+    margin-top: 0;
+  }
+
+  .s3 .icons img {
+    max-width: 112px;
+  }
+
+  .s3 .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .video-card video {
+    max-height: 30vh;
+  }
+
+  .feature-title {
+    font-size: 20px;
+    text-wrap: nowrap;
+  }
+  .feature-list li{
+    font-size: 14px;
+  }
+  .modes-section .feature-title {
+    font-size: 20px;
+  }
+  .modes-section .feature-instruction {
+    font-size: 14px;
+  }
+  .modes-section .modes-list li {
+    font-size: 14px;
+  }
+   
+  .modes-section .pre-infusion-details {
+    font-size: 14px;
+    margin-left: 40px;
+  }
+  
+}
 
