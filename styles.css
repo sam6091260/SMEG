@@ -1631,7 +1631,7 @@ white-space: nowrap;
   .s3 .title-small{
     margin: 0 auto 30px auto;
     letter-spacing: 0px;
-    font-size: 14px;
+    font-size: 21px;
     font-weight: 200;
     text-wrap: nowrap;
   }
@@ -1646,14 +1646,14 @@ white-space: nowrap;
 
   .s4 .title-small-first {
     letter-spacing: 0px;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 500;
   }
 
   .s4 .title-small-second {
     margin: 0 auto 30px auto;
     letter-spacing: 0px;
-    font-size: 14px;
+    font-size: 24px;
     font-weight: 200;
   }
 
@@ -1768,13 +1768,20 @@ white-space: nowrap;
     height: revert;
   }
 
+  .video-card {
+      position: relative;
+      aspect-ratio: 16/9; /* 強制設定16:9比例 */
+      overflow: hidden;
+  }
+  
   .video-card video {
-      height: auto;
-      width: 100%;
-      max-height: 45vh; /* 使用視窗高度的50%作為最大高度 */
-      min-height: 200px; /* 設定最小高度確保基本顯示 */
-      margin-bottom: 14px;
+      position: absolute;
+      top: 2px;
+      left: 4px;
+        width: 98%;
+        height: 97%;
       object-fit: cover; /* 保持比例並填滿容器 */
+      margin-bottom: 0;
   }
 
   .video-card .video-frame {
@@ -1815,7 +1822,7 @@ white-space: nowrap;
   .s4 .title-small-third {
     margin: 60px auto 8px auto;
     letter-spacing: 0px;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 500;
   }
   
@@ -2057,8 +2064,31 @@ white-space: nowrap;
     height: 50px;
   }
 
-  .video-card video {
+  .s3 .title-small{
+    font-size: 14px;
+  }
+  .s4 .title-small-first{
+    font-size: 16px;
+  }
+  .s4 .title-small-second{
+    font-size: 16px;
+  }
+  .s4 .title-small-third{
+    font-size: 16px;
+  }
+
+  .video-card {
+    aspect-ratio: 16/9; /* 強制設定16:9比例 */
     max-height: 23vh;
+  }
+  
+  .video-card video {
+    position: absolute;
+    top: 2px;
+    left: 4px;
+        width: 98%;
+        height: 96%;
+    object-fit: cover;
   }
 
   .feature-title {
@@ -2081,6 +2111,13 @@ white-space: nowrap;
   .modes-section .pre-infusion-details {
     font-size: 14px;
     margin-left: 40px;
+  }
+
+  .dec-top-left{
+    top: 15%;
+  }
+  .dec-top-left-second{
+    top: 60%;
   }
   
 }
