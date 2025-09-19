@@ -824,7 +824,7 @@
       function changeProduct(direction) {
         currentIndex += direction;
 
-        // 循環輪播 - 修正邏輯讓所有6張圖片都能顯示
+        // 循環輪播
         if (currentIndex >= totalProducts) {
           currentIndex = 0;
         } else if (currentIndex < 0) {
@@ -835,11 +835,11 @@
         let translateX;
         
         if (window.innerWidth <= 768) {
-          // 手機版：調整偏移量讓所有圖片都能看到
+          // 手機版
           translateX = -currentIndex * 180 + 88;
         } else {
-          // 桌面版：每張圖片300px寬度
-          translateX = -currentIndex * 300;
+          // 桌面版：限制在可見範圍內
+          translateX = Math.max(-(totalProducts - 3) * 300, -currentIndex * 300);
         }
         
         slider.style.transform = `translateX(${translateX}px)`;
@@ -890,32 +890,33 @@
 
       // 影片自動播放功能
       function handleVideoAutoplay() {
+        return;
         // 手機版不自動播放影片，讓使用者自己點擊播放
-        if (window.innerWidth <= 768) {
-          return;
-        }
+        // if (window.innerWidth <= 768) {
+        //   return;
+        // }
         
-        const videos = document.querySelectorAll('video[id^="video"]');
+        // const videos = document.querySelectorAll('video[id^="video"]');
         
-        videos.forEach(video => {
-          const videoTop = video.getBoundingClientRect().top;
-          const videoBottom = video.getBoundingClientRect().bottom;
-          const windowHeight = window.innerHeight;
+        // videos.forEach(video => {
+        //   const videoTop = video.getBoundingClientRect().top;
+        //   const videoBottom = video.getBoundingClientRect().bottom;
+        //   const windowHeight = window.innerHeight;
           
-          // 當影片進入視窗範圍時自動播放
-          if (videoTop < windowHeight && videoBottom > 0) {
-            if (video.paused) {
-              video.play().catch(e => {
-                console.log('影片自動播放失敗:', e);
-              });
-            }
-          } else {
-            // 當影片離開視窗範圍時暫停
-            if (!video.paused) {
-              video.pause();
-            }
-          }
-        });
+        //   // 當影片進入視窗範圍時自動播放
+        //   if (videoTop < windowHeight && videoBottom > 0) {
+        //     if (video.paused) {
+        //       video.play().catch(e => {
+        //         console.log('影片自動播放失敗:', e);
+        //       });
+        //     }
+        //   } else {
+        //     // 當影片離開視窗範圍時暫停
+        //     if (!video.paused) {
+        //       video.pause();
+        //     }
+        //   }
+        // });
       }
 
       // 創建節流版本的滾動處理函數
