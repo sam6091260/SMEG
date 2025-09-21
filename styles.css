@@ -2202,7 +2202,7 @@ white-space: nowrap;
   }
 
   .s3 .title-small{
-    font-size: 14px;
+    font-size: 14px !important;
   }
   .s4 .title-small-first{
     font-size: 16px !important;
