@@ -491,13 +491,18 @@ a {
   min-width: 1200px; /* 確保輪播最小寬度 */
 }
 
-.carousel-btn {
+.swiper-slide {
+  width: 34.633% !important;
+}
+
+
+.swiper-button-prev, .swiper-button-next  {
   background: #c9b89d;
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  color: rgb(74, 66, 66);
+  width: 35px !important;
+  height: 35px !important;
+  /* color: rgb(74, 66, 66);
   font-size: 32px;
   font-weight: bold;
   cursor: pointer;
@@ -507,10 +512,15 @@ a {
   justify-content: center;
   line-height: 1;
   padding-bottom: 4px;
-  margin: 0;
+  margin: 0; */
 }
 
-.carousel-btn:hover {
+.swiper-button-prev:after, .swiper-button-next:after {
+ color: #fff;
+ font-size: 16px !important;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
   background: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.5);
   transform: scale(1.1);
@@ -553,10 +563,11 @@ a {
 }
 
 .product-item {
-  width: 5.666%; /* 100% / 6張圖片 = 16.666% */
+  width: 80%; /* 100% / 6張圖片 = 16.666% */
   height: auto;
   flex-shrink: 0;
   transition: all 0.3s ease;
+  margin: 0 !important;
 }
 
 .product-item:hover {
@@ -1813,40 +1824,27 @@ white-space: nowrap;
     padding: 0 6px;
   }
 
-  /* 產品輪播響應式 */
-  .product-carousel {
-    margin: 50px 0;
-    padding: 0 8px;
-    width: 100%;
-    left: 50%;
-    transform: none;
-    min-width: 100vw;
-    overflow-x: hidden;
-  }
-  
-  .product-container {
-    margin: 0 10px;
-    max-width: 100%;
-  }
-  
-  .product-container::before,
-  .product-container::after {
-    width: 40px;
-  }
-  
   .product-item {
-    width: 33.666%; /* 保持百分比寬度，適應各種螢幕 */
+    width: 100%; /* 保持百分比寬度，適應各種螢幕 */
   }
   
   .product-slider {
     width: 100%; /* 6張圖片 × 100% */
   }
-  
-  .carousel-btn {
-    width: 24px;
-    height: 22px;
-    font-size: 24px;
+
+  .swiper-slide {
+    width: 33.633% !important;
   }
+
+  .swiper-button-prev, .swiper-button-next  {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 8px !important;
+  }
+  
   
   .s4 .video-grid {
     grid-template-columns: 1fr;
