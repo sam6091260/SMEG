@@ -247,13 +247,13 @@
                       alt="Smeg 咖啡機 黑色"
                     />
                   </div>
-                  <div class="swiper-slide">
+                  <!-- <div class="swiper-slide">
                     <img
                       class="product-item"
                       src="images/PC/Product_blue.png"
                       alt="Smeg 咖啡機 藍色"
                     />
-                  </div>
+                  </div> -->
                   <div class="swiper-slide">
                     <img
                       class="product-item"
@@ -344,6 +344,7 @@
                 controls
                 preload="metadata"
                 muted
+                poster="images/PC/video_first.png"
               >
                 <source src="images/video/video_1.mp4" type="video/mp4" />
               </video>
@@ -359,8 +360,9 @@
               <video
                 id="video2"
                 controls
-                preload="metadata""
+                preload="metadata"
                 muted
+                poster="images/PC/video_second.png"
               >
                 <source src="images/video/video_2.mp4" type="video/mp4" />
               </video>
@@ -395,10 +397,10 @@
                   <div class="feature-title">內建定量磨豆機</div>
                   <ul class="feature-list">
                     <li>專業義式咖啡極細研磨</li>
-                    <li>研磨快速(18公克約8~10秒)</li>
+                    <li>研磨快速 (18公克約8~10秒)</li>
                     <li>去靜電設計，不結塊、不卡粉</li>
                     <li>快拆式不鏽鋼錐刀，清潔方便</li>
-                    <li>定量研磨(單杯/雙杯)，一鍵記憶設定</li>
+                    <li>定量研磨 (單杯/雙杯)，一鍵記憶設定</li>
                   </ul>
                 </div>
               </div>
@@ -419,8 +421,7 @@
                   <div class="feature-title">壓力監控錶設計</div>
                   <ul class="feature-list">
                     <li>萃取壓力即時監控</li>
-                    <li>過載自動洩壓閥設置</li>
-                    <li>過載時，單/雙杯按鍵會同時閃爍</li>
+                    <li>過載自動洩壓閥設置<br/>過載時，單/雙杯按鍵會同時閃爍</li>
                   </ul>
                 </div>
               </div>
@@ -440,7 +441,7 @@
                 <div class="feature-text fade-in-right">
                   <div class="feature-title">雙加熱系統</div>
                   <p class="feature-description">
-                    分別用於咖啡沖泡和蒸汽熱水，<br />無需等待加熱即可使用。
+                    分別用於咖啡沖泡和蒸汽熱水，無需等待加熱即可使用。
                   </p>
                 </div>
                 <img
@@ -470,7 +471,7 @@
                   <p class="feature-instruction small-wrap">
                     同時按住
                     <img
-                      src="images/PC/block_5_icon_3.svg"
+                      src="images/PC/block_5_icon_1.svg"
                       alt="icon1"
                       class="s5-icon"
                     />
@@ -517,32 +518,64 @@
                   </ul>
                   <ul class="feature-list modes-list is-m">
                     <li>
-                      <img
+                      <div>
+                        <img
                         src="images/PC/block_5_icon_1.svg"
                         alt="icon3"
                         class="s5-icon"
-                      />自動關機時間<br/>(10、30、40、60分鐘)
+                      />
+                      <span>
+                        自動關機時間
+                      </span>
+                      </div>
+                      <span class="list-item">
+                        ( 10、30、40、60分鐘 )
+                      </span>
                     </li>
                     <li>
-                      <img
-                        src="images/PC/block_5_icon_2.svg"
-                        alt="icon4"
-                        class="s5-icon"
-                      />水質硬度<br/>(軟、中、硬、極硬)
+                      <div>
+                        <img
+                          src="images/PC/block_5_icon_2.svg"
+                          alt="icon4"
+                          class="s5-icon"
+                        />
+                        <span>
+                          水質硬度
+                        </span>
+                      </div>
+                      <span class="list-item">
+                        ( 軟、中、硬、極硬 )
+                      </span>
                     </li>
                     <li>
-                      <img
-                        src="images/PC/block_5_icon_3.svg"
-                        alt="icon5"
-                        class="s5-icon"
-                      />萃取溫度<br/>(低、中、中高、高)
+                      <div>
+                        <img
+                          src="images/PC/block_5_icon_3.svg"
+                          alt="icon5"
+                          class="s5-icon"
+                        />
+                        <span>
+                          萃取溫度
+                        </span>
+                      </div>
+                      <span class="list-item">
+                        ( 低、中、中高、高 )
+                      </span>
                     </li>
                     <li>
-                      <img
-                        src="images/PC/block_5_icon_4.svg"
-                        alt="icon6"
-                        class="s5-icon"
-                      />預浸泡模式<br/>(短、標準、長、漸進式)
+                      <div>
+                        <img
+                          src="images/PC/block_5_icon_4.svg"
+                          alt="icon6"
+                          class="s5-icon"
+                        />
+                        <span>
+                          預浸泡模式
+                        </span>
+                      </div>
+                      <span class="list-item">
+                        ( 短、標準、長、漸進式 )
+                      </span>
                     </li>
                   </ul>
                     <p class="pre-infusion-details is-pc fade-in-right">
@@ -631,31 +664,13 @@
           alt="精選熱銷"
         />
           <!-- 商品展示區域 -->
-          <div class="PD_layout" data-pd-col-pc="5" data-pd-col-phone="2">
+          <div class="PD_layout" data-pd-col-pc="4" data-pd-col-phone="2">
             <ul>
               <li class="PD_slide">
                 <div class="PD">
                   <a href="#">
                     <div class="PD_img">
                       <img src="images/PC/Product_black.png" alt="產品1" />
-                    </div>
-                    <div class="PD_into">
-                      <h3>破盤下殺現折2901</h3>
-                      <h4>Apple 蘋果 | iPhone 12 Pro Max 128G</h4>
-                      <p>
-                        <del>3990</del>
-                        <span class="money">$3699</span>
-                        <small>/組</small>
-                      </p>
-                    </div>
-                  </a>
-                </div>
-              </li>
-              <li class="PD_slide">
-                <div class="PD">
-                  <a href="#">
-                    <div class="PD_img">
-                      <img src="images/PC/Product_blue.png" alt="產品2" />
                     </div>
                     <div class="PD_into">
                       <h3>破盤下殺現折2901</h3>
@@ -705,7 +720,7 @@
                   </a>
                 </div>
               </li>
-              <li class="PD_slide is-pc">
+              <li class="PD_slide">
                 <div class="PD">
                   <a href="#">
                     <div class="PD_img">
@@ -723,6 +738,24 @@
                   </a>
                 </div>
               </li>
+              <!-- <li class="PD_slide">
+                <div class="PD">
+                  <a href="#">
+                    <div class="PD_img">
+                      <img src="images/PC/Product_blue.png" alt="產品2" />
+                    </div>
+                    <div class="PD_into">
+                      <h3>破盤下殺現折2901</h3>
+                      <h4>Apple 蘋果 | iPhone 12 Pro Max 128G</h4>
+                      <p>
+                        <del>3990</del>
+                        <span class="money">$3699</span>
+                        <small>/組</small>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </li> -->
             </ul>
           </div>
           
@@ -803,7 +836,7 @@
         "Product_red.png",
         "Product_white.png",
         "Product_black.png",
-        "Product_blue.png",
+        // "Product_blue.png",
         "Product_green.png",
       ];
 
