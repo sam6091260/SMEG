@@ -8,8 +8,8 @@ body {
   color: #2b2b2b;
   background: #000;
   padding-top: 60px;
-  overflow-x: auto; /* 允許水平滾動 */
-  min-width: 1200px; /* 設定最小寬度 */
+  overflow-x: auto;
+  min-width: 1200px;
 }
 main {
   overflow-x: hidden;
@@ -139,7 +139,7 @@ a {
   position: relative;
   width: 100%;
   padding: 0 20px;
-  min-width: 1200px; /* 確保 wrap 最小寬度 */
+  min-width: 1200px;
 }
 
 .section {
@@ -271,7 +271,6 @@ a {
 
 .kv .halo {
   position: absolute;
-  /* top: 150px; */
   left: 70%;
   transform: translateX(-50%);
   width: 100%;
@@ -487,12 +486,15 @@ a {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  /* padding: 0 20px; */
-  min-width: 1200px; /* 確保輪播最小寬度 */
+  min-width: 1200px;
 }
 
-.swiper-slide {
-  width: 34.633% !important;
+.swiper-wrapper {
+  width: 100% !important;
+}
+
+.swiper-slide, .swiper-slide-active, .swiper-slide-prev, .swiper-slide-next {
+  width: 33.633% !important;
 }
 
 /* Swiper 容器光暈遮罩 */
@@ -505,22 +507,22 @@ a {
   content: '';
   position: absolute;
   top: 0;
-  width: 80px;
+  width: 130px;
   height: 100%;
-  z-index: 1; /* 降低 z-index，讓按鈕在上層 */
+  z-index: 1; 
   pointer-events: none;
 }
 
 .product-swiper::before {
   left: 0;
-  background: linear-gradient(to right, #1e130c 0%, rgba(30, 19, 12, 0.8) 30%, transparent 100%);
-  z-index: 5; /* 提高左邊遮罩的 z-index */
+  background: linear-gradient(to right, #1e130c 0%, rgba(30, 19, 12, 0.8) 40%, transparent 100%);
+  z-index: 5;
 }
 
 .product-swiper::after {
   right: 0;
-  background: linear-gradient(to left, #1e130c 0%, rgba(30, 19, 12, 0.8) 30%, transparent 100%);
-  z-index: 5; /* 提高右邊遮罩的 z-index */
+  background: linear-gradient(to left, #1e130c 0%, rgba(30, 19, 12, 0.8) 40%, transparent 100%);
+  z-index: 5;
 }
 
 
@@ -530,18 +532,7 @@ a {
   border-radius: 50%;
   width: 35px !important;
   height: 35px !important;
-  z-index: 20 !important; /* 確保按鈕在遮罩之上 */
-  /* color: rgb(74, 66, 66);
-  font-size: 32px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  padding-bottom: 4px;
-  margin: 0; */
+  z-index: 20 !important;
 }
 
 .swiper-button-prev:after, .swiper-button-next:after {
@@ -587,16 +578,17 @@ a {
 .product-slider {
   display: flex;
   transition: transform 0.5s ease;
-  width: 600%; /* 6張圖片 × 100% */
+  width: 600%;
   position: relative;
 }
 
 .product-item {
-  width: 80%; /* 100% / 6張圖片 = 16.666% */
+  width: 100% !important;
   height: auto;
   flex-shrink: 0;
   transition: all 0.3s ease;
   margin: 0 !important;
+  object-fit: contain;
 }
 
 .product-item:hover {
@@ -652,7 +644,6 @@ white-space: nowrap;
 }
 
 .s3 .gallery img {
-  /* border-radius: 10px; */
   overflow: hidden;
 }
 
@@ -735,11 +726,8 @@ white-space: nowrap;
 
 .video-card {
   position: relative;
-  /* border-radius: 16px; */
   overflow: hidden;
   height: 562px;
-  /* background: #000; */
-  /* box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); */
 }
 
 .video-card video {
@@ -759,8 +747,7 @@ white-space: nowrap;
   left: 0;
   width: 100%;
   height: 100%;
-  /* z-index: 5; */
-  pointer-events: none; /* 讓點擊穿透到影片 */
+  pointer-events: none; 
 }
 
 .dec-top-left {
@@ -821,9 +808,6 @@ white-space: nowrap;
 }
 /* S5 特色介紹 */
 .s5 {
-  /* padding: 100px 0;
-  background: #1c120e;
-  min-width: 1200px; */
   padding: 80px 0;
   background-image: url(images/PC/bg_style_2.jpg);
 }
@@ -985,12 +969,7 @@ white-space: nowrap;
 .pre-infusion-details {
   text-wrap: nowrap;
   margin-left: 40px;
-  opacity: 0.8 !important; /* 使用 !important 確保不被動畫覆蓋 */
-  /* margin-top: 20px;
-  padding: 15px;
-  background: rgba(201, 184, 157, 0.1);
-  border-radius: 8px;
-  border-left: 4px solid #c9b89d; */
+  opacity: 0.8 !important;
 }
 
 
@@ -1042,7 +1021,6 @@ white-space: nowrap;
   display: flex;
   flex-direction: column;
   gap: 0;
-  /* width: 100vw; */
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -1094,13 +1072,13 @@ white-space: nowrap;
 
 /* 為 pre-infusion-details 創建特殊的動畫類 */
 .pre-infusion-details.fade-in-right {
-  opacity: 0.8 !important; /* 保持透明度 */
+  opacity: 0.8 !important;
   transform: translateX(-50px);
-  transition: transform 0.8s ease; /* 只動畫 transform，不動畫 opacity */
+  transition: transform 0.8s ease;
 }
 
 .pre-infusion-details.fade-in-right.animate {
-  opacity: 0.8 !important; /* 動畫後仍保持透明度 */
+  opacity: 0.8 !important;
   transform: translateX(0);
 }
 
@@ -1854,38 +1832,59 @@ white-space: nowrap;
   }
 
   .product-item {
-    width: 100%; /* 保持百分比寬度，適應各種螢幕 */
+    width: 100%;
   }
   
   .product-slider {
-    width: 100%; /* 6張圖片 × 100% */
+    width: 100%;
   }
 
   .swiper-slide {
     width: 33.633% !important;
   }
   
+  /* 手機版 Swiper 容器設定 */
+  .product-swiper {
+    overflow: visible !important; 
+    padding: 0 15px;
+  }
+  
   /* 手機版光暈遮罩 */
   .product-swiper::before,
   .product-swiper::after {
-    width: 40px; /* 手機版較窄的遮罩 */
+    width: 120px;
   }
   
   .product-swiper::before {
-    background: linear-gradient(to right, #1e130c 0%, rgba(30, 19, 12, 0.6) 40%, transparent 100%);
-    z-index: 5; /* 確保手機版左邊遮罩可見 */
+    background: linear-gradient(to right, #1e130c 0%, rgba(30, 19, 12, 0.6) 60%, transparent 100%);
+    z-index: 5; 
+    left: -24px !important;
   }
   
   .product-swiper::after {
-    background: linear-gradient(to left, #1e130c 0%, rgba(30, 19, 12, 0.6) 40%, transparent 100%);
-    z-index: 5; /* 確保手機版右邊遮罩可見 */
+    background: linear-gradient(to left, #1e130c 0%, rgba(30, 19, 12, 0.6) 60%, transparent 100%);
+    z-index: 5;
+    right: -24px !important;
   }
 
   .swiper-button-prev, .swiper-button-next  {
     width: 20px !important;
     height: 20px !important;
-    z-index: 20 !important; /* 確保按鈕在遮罩之上 */
+    z-index: 20 !important;
   }
+
+  .swiper-button-prev {
+    left: -10px !important;
+    position: absolute !important;
+    z-index: 30 !important;
+  }
+  
+  .swiper-button-next {
+    right: -10px !important;
+    position: absolute !important;
+    z-index: 30 !important;
+  }
+
 
   .swiper-button-prev:after, .swiper-button-next:after {
     font-size: 8px !important;
@@ -1908,7 +1907,7 @@ white-space: nowrap;
 
   .video-card {
       position: relative;
-      aspect-ratio: 16/9; /* 強制設定16:9比例 */
+      aspect-ratio: 16/9;
       overflow: hidden;
   }
   
@@ -1918,7 +1917,7 @@ white-space: nowrap;
       left: 4px;
         width: 98%;
         height: 97%;
-      object-fit: cover; /* 保持比例並填滿容器 */
+      object-fit: cover;
       margin-bottom: 0;
   }
 
@@ -2008,7 +2007,6 @@ white-space: nowrap;
     padding: 0 8px;
     display: flex;
     align-items: center;
-    /* flex-direction: column; */
     justify-content: center;
   }
   
@@ -2215,7 +2213,7 @@ white-space: nowrap;
   }
 
   .video-card {
-    aspect-ratio: 16/9; /* 強制設定16:9比例 */
+    aspect-ratio: 16/9;
     max-height: 23vh;
   }
   

@@ -839,19 +839,21 @@
         productSwiper = new Swiper('.product-swiper', {
           // 基本設定
           loop: true, // 無限循環
-          slidesPerView: 'auto', // 固定顯示3張圖片
-          spaceBetween: 20, // 間距
+          slidesPerView: 3, // 固定顯示3張圖片
+          spaceBetween: 0, // 無間距
           centeredSlides: true, // 居中顯示
           
           // 響應式設定
           breakpoints: {
             320: {
-              slidesPerView: 3, // 手機版顯示2張
+              slidesPerView: 3, // 手機版顯示3張
               spaceBetween: 0,
+              centeredSlides: true,
             },
             768: {
               slidesPerView: 3, // 桌面版顯示3張
               spaceBetween: 0,
+              centeredSlides: true,
             }
           },
           
