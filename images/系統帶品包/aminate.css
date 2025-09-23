@@ -1,0 +1,260 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*煙火*/
+.fadeOut2{
+ animation-name: fadeOut2;
+ -webkit-animation-name: fadeOut2; 
+ animation-duration: 3.6s; 
+ -webkit-animation-duration: 3.6s;
+ animation-timing-function: ease-out; 
+ -webkit-animation-timing-function: ease-out;
+ animation-iteration-count: infinite;
+ -webkit-animation-iteration-count: infinite;  
+/* visibility: visible !important; */
+}
+@keyframes fadeOut2 {
+  0% {
+  opacity: 0.0;  filter:brightness(100%);
+ }
+ 50% {
+  transform: scale(0);  filter:brightness(100%);
+  opacity: 0; 
+ }
+ 60% {
+  transform: scale(0.9);  filter:brightness(100%);
+  opacity: 1; 
+ }
+ 95% {
+  transform: scale(1.2);   filter:brightness(100%);
+ } 
+  100% {
+  transform: /*scale(1)*/translateY(10%);
+  opacity: 0.0;  
+ }
+ }
+@-webkit-keyframes fadeOut2 {
+  0% {
+  opacity: 0.0;  filter:brightness(100%);
+ }
+ 50% {
+  transform: scale(0);  filter:brightness(100%);
+  opacity: 0; 
+ }
+ 60% {
+  transform: scale(0.9);  filter:brightness(100%);
+  opacity: 1; 
+ }
+ 95% {
+  transform: scale(1.2);   filter:brightness(100%);
+ } 
+  100% {
+  transform: /*scale(1)*/translateY(10%);
+  opacity: 0.0;  
+ } 
+}
+
+/*飄-上下*/
+.uptodown-play { -webkit-animation:uptodown-play 1.5s infinite alternate;
+				         animation:uptodown-play 1.5s infinite alternate;}
+	@-webkit-keyframes uptodown-play { 
+		0% { 
+			-webkit-transform: translate(0,-10px);  
+		} 
+		100% { 
+			-webkit-transform: translate(0,0);
+		}
+	}
+	@keyframes uptodown-play { 
+		0% { 
+			transform: translate(0,-10px);  
+		} 
+		100% { 
+			transform: translate(0,0);
+		}
+	}
+
+/*飄-下上*/
+.downtoup-play { -webkit-animation:downtoup-play 1.5s infinite alternate;
+				         animation:downtoup-play 1.5s infinite alternate;}
+	@-webkit-keyframes downtoup-play { 
+		0% { 
+			-webkit-transform: translate(0,0);  
+		} 
+		100% { 
+			-webkit-transform: translate(0,-10px);
+		}
+	}
+	@keyframes downtoup-play { 
+		0% { 
+			transform: translate(0,0);  
+		} 
+		100% { 
+			transform: translate(0,-10px);
+		}
+	}
+
+
+
+/*轉轉3*/
+.rotate3-play { -webkit-animation:rotate3-play 20s linear infinite ;
+				       animation:rotate3-play 20s linear infinite ;}
+	@keyframes rotate3-play {
+	  100% { 
+			transform: rotate(-360deg);
+	  }
+	}
+
+/*背景飄上*/
+.bgupup-play { -webkit-animation:bgupup-play 40s linear infinite ;
+				       animation:bgupup-play 40s linear infinite ;}
+	@keyframes bgupup-play {
+	  100% { background-position: center -925px;
+	  }
+	}
+
+
+/*心跳A*/
+.heartbeat-play {-webkit-animation-duration: 1s;  animation-duration: 1s;  -webkit-animation-name: heartbeat-play;  animation-name: heartbeat-play;  -webkit-animation-iteration-count: infinite;    animation-iteration-count:infinite;/* -webkit-animation-direction: alternate;animation-direction: alternate;*/}
+	@-webkit-keyframes heartbeat-play {   
+		0%   { -webkit-transform: scale(1); transform: scale(1); filter:brightness(120%);} 
+		40%  { -webkit-transform: scale(0.95); transform: scale(0.95); filter:brightness(100%);} 
+		60%  { -webkit-transform: scale(1); transform: scale(1); filter:brightness(120%);} 
+		80%  { -webkit-transform: scale(0.95); transform: scale(0.95); filter:brightness(100%);}
+		100% { -webkit-transform: scale(1); transform: scale(1); filter:brightness(120%);} 
+		}
+	@keyframes heartbeat-play { 
+		0%   { -webkit-transform: scale(1); transform: scale(1); filter:brightness(120%);} 
+		40%  { -webkit-transform: scale(0.95); transform: scale(0.95); filter:brightness(100%);} 
+		60%  { -webkit-transform: scale(1); transform: scale(1); filter:brightness(120%);} 
+		80%  { -webkit-transform: scale(0.95); transform: scale(0.95); filter:brightness(100%);}
+		100% { -webkit-transform: scale(1); transform: scale(1); filter:brightness(120%);} 
+	}
+
+/*彈跳*/	
+.bounce-play { -webkit-animation:bounce-play 3s linear infinite ;
+				          animation:bounce-play 3s linear infinite ;}
+	@-webkit-keyframes bounce-play {
+	  0%, 5%, 12.5%, 20%, 25% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	  }
+	
+	  10% {
+		-webkit-transform: translateY(-10%);
+		transform: translateY(-10%);
+	  }
+	
+	  15% {
+		-webkit-transform: translateY(-5%);
+		transform: translateY(-5%);
+	  }
+	}
+	
+	@keyframes bounce-play {
+	  0%, 5%, 12.5%, 20%, 25% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	  }
+	
+	  10% {
+		-webkit-transform: translateY(-10%);
+		transform: translateY(-10%);
+	  }
+	
+	  15% {
+		-webkit-transform: translateY(-5%);
+		transform: translateY(-5%);
+	  }
+	}
+
+/*主標微亮*/		  
+.minbright-play { -webkit-animation:minbright-play 2s infinite alternate; animation:minbright-play 2s infinite alternate ;}
+	@-webkit-keyframes minbright-play {
+	  0% { 
+		filter:brightness(110%);
+	  }
+	  100% { 
+		filter:brightness(100%);
+	  }
+	}
+	@keyframes minbright-play {
+	  0% { 
+		filter:brightness(110%);
+	  }
+	  100% { 
+		filter:brightness(100%);
+	  }
+	}
+
+/*閃光*/				  
+.brightness-play1 { -webkit-animation:brightness-play 3s infinite ;
+				           animation:brightness-play 3s infinite ;}
+	@-webkit-keyframes brightness-play {
+	  0% { 
+		filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1" /><feFuncG type="linear" slope="1" /><feFuncB type="linear" slope="1" /></feComponentTransfer></filter></svg>#filter'); 
+		-webkit-filter:brightness(100%); 
+		        filter:brightness(100%);
+	  }
+	  92% { 
+		filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1" /><feFuncG type="linear" slope="1" /><feFuncB type="linear" slope="1" /></feComponentTransfer></filter></svg>#filter'); 
+		-webkit-filter:brightness(100%); 
+		        filter:brightness(100%);
+	  }
+	  94% { 
+		filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="2" /><feFuncG type="linear" slope="2" /><feFuncB type="linear" slope="2" /></feComponentTransfer></filter></svg>#filter'); 
+		-webkit-filter:brightness(120%); 
+		        filter:brightness(200%);
+	  }
+	  96% { 
+		filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1" /><feFuncG type="linear" slope="1" /><feFuncB type="linear" slope="1" /></feComponentTransfer></filter></svg>#filter'); 
+		-webkit-filter:brightness(100%); 
+		        filter:brightness(100%);
+	  }
+	  98% { 
+		filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="2" /><feFuncG type="linear" slope="2" /><feFuncB type="linear" slope="2" /></feComponentTransfer></filter></svg>#filter'); 
+		-webkit-filter:brightness(120%); 
+		        filter:brightness(120%);
+	  }
+	  100% { 
+		filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/1500/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1" /><feFuncG type="linear" slope="1" /><feFuncB type="linear" slope="1" /></feComponentTransfer></filter></svg>#filter'); 
+		-webkit-filter:brightness(100%); 
+		        filter:brightness(100%);
+	  }
+	}
+	@keyframes brightness-play {
+	  0% { 
+		filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1" /><feFuncG type="linear" slope="1" /><feFuncB type="linear" slope="1" /></feComponentTransfer></filter></svg>#filter'); 
+		-webkit-filter:brightness(100%); 
+		        filter:brightness(100%);
+	  }
+	  92% { 
+		filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1" /><feFuncG type="linear" slope="1" /><feFuncB type="linear" slope="1" /></feComponentTransfer></filter></svg>#filter'); 
+		-webkit-filter:brightness(100%); 
+		        filter:brightness(100%);
+	  }
+	  94% { 
+		filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="2" /><feFuncG type="linear" slope="2" /><feFuncB type="linear" slope="2" /></feComponentTransfer></filter></svg>#filter'); 
+		-webkit-filter:brightness(120%); 
+		        filter:brightness(120%);
+	  }
+	  96% { 
+		filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1" /><feFuncG type="linear" slope="1" /><feFuncB type="linear" slope="1" /></feComponentTransfer></filter></svg>#filter'); 
+		-webkit-filter:brightness(100%); 
+		        filter:brightness(100%);
+	  }
+	  98% { 
+		filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="2" /><feFuncG type="linear" slope="2" /><feFuncB type="linear" slope="2" /></feComponentTransfer></filter></svg>#filter'); 
+		-webkit-filter:brightness(120%); 
+		        filter:brightness(120%);
+	  }
+	  100% { 
+		filter:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1" /><feFuncG type="linear" slope="1" /><feFuncB type="linear" slope="1" /></feComponentTransfer></filter></svg>#filter'); 
+		-webkit-filter:brightness(100%); 
+		        filter:brightness(100%);
+	  }
+}
+
+
+
+
