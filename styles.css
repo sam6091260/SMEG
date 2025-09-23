@@ -1993,7 +1993,7 @@ white-space: nowrap;
   }
   
   .feature-list li {
-    font-size: 16px;
+    font-size: 15px;
     padding-left: 14px;
     line-height: 1.4;
     margin-bottom: 4px;
@@ -2005,7 +2005,7 @@ white-space: nowrap;
   }
 
   .feature-description {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.4;
     text-wrap: wrap;
   }
@@ -2075,13 +2075,17 @@ white-space: nowrap;
   }
   
   .modes-section .modes-list li {
-    font-size: 16px;
+    font-size: 15px;
     padding-left: 12px;
     line-height: 1.3;
     margin-bottom: 6px;
+    text-wrap: nowrap;
+  > div {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start !important;
     gap: 8px;
+    /* flex-wrap: nowrap !important; */
+    }
   }
   
   .modes-section .s5-icon {
@@ -2250,6 +2254,7 @@ white-space: nowrap;
   .modes-section .modes-list li {
     font-size: 14px;
     flex-direction: column !important;
+    align-items: flex-start;
   }
 
   .modes-section .modes-list li  div {
