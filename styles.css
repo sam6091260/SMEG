@@ -972,7 +972,7 @@ white-space: nowrap;
 
 .pre-infusion-details {
   text-wrap: nowrap;
-  margin-left: 40px;
+  margin-left: 60px;
   opacity: 0.8 !important;
 }
 
@@ -2090,6 +2090,10 @@ white-space: nowrap;
     /* flex-wrap: nowrap !important; */
     }
   }
+
+  .modes-section .modes-list li span.list-item {
+    padding-left: 32px ;
+  }
   
   .modes-section .s5-icon {
     width: 24px;
@@ -2098,15 +2102,14 @@ white-space: nowrap;
   }
   
   .modes-section .pre-infusion-details {
-    margin-left: 0;
     margin-top: 12px;
-    margin-left: 50px;
+    margin-left: 60px;
     opacity: 0.8;
-    font-size: 16px;
+    font-size: 15px;
   }
   
   .modes-section .pre-infusion-details p {
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.4;
     text-wrap: wrap;
   }
